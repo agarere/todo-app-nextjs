@@ -6,3 +6,34 @@
   height: 100vh;
   width: 100%;
 }
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.tabs-list {
+  width: 480px;
+}
+
+.tab-button {
+  width: 50%;
+}
+
+.todo-start-container {
+  width: 480px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.todo-addedit-container {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+

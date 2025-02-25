@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button"
+"use client"
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
-  return (
-    <div className='container'>
-      <Button>Click me</Button>
-    </div>
-  );
+  const router = useRouter()
+
+  useEffect(() => {
+    router.push('/todo')
+  }
+  , [])
 }
