@@ -8,15 +8,23 @@ export default function AddTodoComponent({ addTodo }) {
 
   const handleAddTodo = () => {
     addTodo(todo)
+    setTodo("")
   }
 
-  const todoEnter = (e) => {
-    setTodo(e.target.value)
+  const keyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleAddTodo()
+    }
   }
 
   return (
     <div className="flex w-full max-w-lg items-center space-x-2 mb-4">
-      <Input placeholder="Todo..." onChange={todoEnter}/>
+      <Input
+        placeholder="Todo..."
+        value={todo}
+        onChange={(event) => setTodo(event.target.value)}
+        onKeyDown={keyDown}
+      />
       <Button
         type="submit"
         onClick={() => handleAddTodo()}

@@ -21,11 +21,11 @@ export default function TabComponent() {
           Todo
         </TabsTrigger>
         <TabsTrigger
-          value="done"
+          value="info"
           className="tab-button"
-          onClick={() => tabClick("done")}
+          onClick={() => tabClick("info")}
         >
-          Done
+          Info
         </TabsTrigger>
       </TabsList>
     </Tabs>
